@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/crimelens/Hero";
 import Summary from "@/components/crimelens/Summary";
 import Problem from "@/components/crimelens/Problem";
@@ -17,6 +18,11 @@ import Architecture from "@/components/crimelens/Architecture";
 export default function CrimeLensPage() {
   return (
     <main className="bg-[#050505] text-white">
+      <div className="px-8 pt-8">
+        <Link href="/" className="text-gray-400 transition hover:text-white">
+          Back to Portfolio
+        </Link>
+      </div>
       <Hero />
       <Summary />
       <Problem />

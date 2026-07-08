@@ -25,3 +25,37 @@ body {
   background: #2563eb;
   color: white;
 }
+
+section{
+  scroll-margin-top: 120px;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #2563eb;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #3b82f6;
+}
+
+body{
+  background:#050505;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+::selection{
+  background:#2563eb;
+  color:white;
+}

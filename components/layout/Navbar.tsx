@@ -1,36 +1,45 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+    <motion.header
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="fixed left-0 top-0 z-50 w-full"
+    >
+      <div className="mx-auto mt-5 flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-8 py-5 backdrop-blur-2xl">
 
         <a
           href="#home"
-          className="text-lg font-semibold tracking-tight hover:text-blue-400 transition"
+          className="text-xl font-bold tracking-tight transition hover:text-blue-400"
         >
           Advait Awasthi
         </a>
 
-        <div className="hidden md:flex items-center gap-10 text-sm text-gray-400">
+        <div className="flex items-center gap-8 text-sm">
 
-          <a href="#about" className="hover:text-white transition">
+          <a href="#about" className="transition hover:text-blue-400">
             About
           </a>
 
-          <a href="#projects" className="hover:text-white transition">
+          <a href="#projects" className="transition hover:text-blue-400">
             Projects
           </a>
 
-          <a href="#research" className="hover:text-white transition">
+          <a href="#research" className="transition hover:text-blue-400">
             Research
           </a>
 
-          <a href="#contact" className="hover:text-white transition">
+          <a href="#contact" className="transition hover:text-blue-400">
             Contact
           </a>
 
         </div>
 
-      </nav>
-    </header>
+      </div>
+    </motion.header>
   );
 }

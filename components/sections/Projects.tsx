@@ -1,4 +1,6 @@
-import SectionTitle from "@/components/ui/SectionTitle";
+"use client";
+
+import { motion } from "framer-motion";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 export default function Projects() {
@@ -7,62 +9,72 @@ export default function Projects() {
       id="projects"
       className="mx-auto max-w-7xl px-8 py-40"
     >
-      <SectionTitle
-        subtitle="Research & Engineering Portfolio"
-        title="Selected Projects"
-      />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <p className="uppercase tracking-[0.35em] text-blue-400">
+          Featured Projects
+        </p>
 
-      {/* =======================
-          FEATURED PROJECT
-      ======================== */}
+        <h2 className="mt-6 text-6xl font-black">
+          Research.
+          <br />
+          Engineering.
+          <br />
+          Innovation.
+        </h2>
 
-      <div className="mb-10">
+        <p className="mt-8 max-w-3xl text-xl leading-9 text-gray-400">
+          Every project represents a step toward building intelligent,
+          secure and impactful software systems.
+        </p>
+      </motion.div>
+
+      <div className="mt-24 grid gap-8">
 
         <ProjectCard
           title="CrimeLens AI"
-          description="An AI-assisted investigative intelligence platform developed during my research internship at Rashtriya Raksha University. The system combines cybercrime research, intelligent evidence analysis, AI-assisted investigation workflows, and modular agent-based architecture to support modern cybercrime investigations."
-          status="⭐ Flagship Research Project"
+          description="An AI-assisted cybercrime investigation platform developed during my research internship. CrimeLens combines intelligent agents, evidence management and investigative workflows into a unified system for law enforcement."
           stack={[
             "Next.js",
-            "React",
+            "TypeScript",
             "Prisma",
             "PostgreSQL",
-            "Docker",
-            "Gemini",
             "AI Agents",
+            "Cybersecurity",
           ]}
+          status="⭐ Flagship Research Project"
         />
 
-      </div>
+        <div className="grid gap-8 lg:grid-cols-2">
 
-      {/* =======================
-          OTHER PROJECTS
-      ======================== */}
+          <ProjectCard
+            title="Robin"
+            description="A desktop AI assistant focused on productivity, automation, local AI workflows and intelligent research assistance."
+            stack={[
+              "Python",
+              "PySide6",
+              "Whisper",
+              "LLMs",
+            ]}
+            status="🚧 Currently Building"
+          />
 
-      <div className="grid gap-10 lg:grid-cols-2">
+          <ProjectCard
+            title="ThreatSight"
+            description="A phishing detection and brand impersonation analysis platform capable of explainable threat scoring and URL analysis."
+            stack={[
+              "Python",
+              "Cybersecurity",
+              "CustomTkinter",
+              "RapidFuzz",
+            ]}
+            status="✅ Completed"
+          />
 
-        <ProjectCard
-          title="Robin AI"
-          description="A modular desktop AI assistant focused on local execution, intelligent automation, voice interaction, and future hardware integration."
-          status="Independent Research Project"
-          stack={[
-            "Python",
-            "PySide6",
-            "OpenWakeWord",
-            "Gemini",
-          ]}
-        />
-
-        <ProjectCard
-          title="ThreatSight"
-          description="Desktop phishing detection platform capable of detecting phishing indicators, brand impersonation, and explainable threat analysis."
-          status="Cybersecurity Project"
-          stack={[
-            "Python",
-            "CustomTkinter",
-            "RapidFuzz",
-          ]}
-        />
+        </div>
 
       </div>
     </section>

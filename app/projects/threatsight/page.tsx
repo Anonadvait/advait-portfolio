@@ -14,7 +14,7 @@ export default function ThreatSightPage() {
             href="/"
             className="text-gray-400 hover:text-white transition"
           >
-            ← Back
+            Back to Portfolio
           </Link>
 
           <p className="mt-10 text-blue-400 uppercase tracking-[0.35em]">
@@ -30,6 +30,15 @@ export default function ThreatSightPage() {
             detecting brand impersonation, and assigning explainable risk
             scores.
           </p>
+
+          <a
+            href="https://github.com/Anonadvait/ThreatSight"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex text-blue-400 transition hover:text-blue-300"
+          >
+            View on GitHub
+          </a>
 
         </div>
 
