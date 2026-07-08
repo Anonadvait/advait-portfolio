@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Contact(): JSX.Element {
+export default function Contact() {
   return (
     <section className="contact">
       <h2>Contact</h2>
