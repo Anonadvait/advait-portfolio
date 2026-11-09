@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF8F5;
+  --bg-soft-white: #FDFBF7;
+  --bg-warm-neutral: #F5F4F0;
+  --bg-card: #FFFFFF;
+  --text-primary: #191B1F;
+  --text-secondary: #525D6B;
+  --text-muted: #828E9E;
+  --border-subtle: #E8E2D8;
+  --border-card: #EAE5DC;
+  --accent-blue: #2A527A;
+  --accent-blue-pale: #DCEAF8;
+  --accent-peach: #F5DFCA;
+  --font-serif: "Georgia", "Cambria", "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF8F5;
+  color: #191B1F;
+}
+
+body {
+  background-color: #FAF8F5;
+  background-image: 
+    radial-gradient(
+      ellipse 90% 85% at 92% 10%,
+      rgba(197, 221, 244, 0.95) 0%,
+      rgba(220, 234, 248, 0.85) 35%,
+      rgba(220, 234, 248, 0.45) 60%,
+      transparent 82%
+    ),
+    radial-gradient(
+      ellipse 90% 85% at 6% 90%,
+      rgba(240, 208, 180, 0.90) 0%,
+      rgba(245, 223, 202, 0.80) 35%,
+      rgba(245, 223, 202, 0.40) 60%,
+      transparent 82%
+    );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #191B1F;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #DCEAF8;
+  color: #162436;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+  border-radius: 999px;
+  border: 2px solid #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BDB5A4;
+}
+
+/* Editorial card utility classes */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE5DC;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 12px -2px rgba(26, 29, 32, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #D6CEC1;
+  box-shadow: 0 8px 24px -4px rgba(26, 29, 32, 0.06);
+}
+
+.editorial-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: #F5F4F0;
+  border: 1px solid #E6E0D4;
+  color: #384554;
+  transition: all 0.2s ease;
+}
+
+.editorial-pill:hover {
+  background-color: #ECE8E0;
+  color: #1A1D20;
+}
